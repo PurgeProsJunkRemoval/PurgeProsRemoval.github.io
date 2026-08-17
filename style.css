@@ -1,0 +1,319 @@
+/* ==========================================
+   1. ANIMATION KEYFRAMES
+   ========================================== */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 245, 160, 0.2); }
+    50% { box-shadow: 0 0 35px rgba(0, 245, 160, 0.45); }
+}
+
+/* ==========================================
+   2. CREATIVE DESIGN TOKENS & VIBE
+   ========================================== */
+:root {
+    --bg-deep: #0B0F19;
+    --bg-card: #131C2E;
+    --bg-card-hover: #1A263F;
+    
+    --neon-mint: #00F5A0;
+    --neon-cyan: #00D9F5;
+    --brand-emerald: #10B981;
+    
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    
+    --radius-pill: 9999px;
+    --radius-box: 20px;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================
+   3. GLOBAL RESET & BASE
+   ========================================== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-deep);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+/* ==========================================
+   4. NAVIGATION BAR
+   ========================================== */
+header {
+    background: rgba(11, 15, 25, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-glass);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--neon-mint), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 36px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--neon-mint);
+    text-shadow: 0 0 12px rgba(0, 245, 160, 0.4);
+}
+
+/* ==========================================
+   5. BUTTONS
+   ========================================== */
+.btn {
+    background: linear-gradient(135deg, var(--neon-mint) 0%, var(--brand-emerald) 100%);
+    color: var(--bg-deep);
+    padding: 14px 30px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 245, 160, 0.3);
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 245, 160, 0.6);
+}
+
+/* ==========================================
+   6. HERO SECTION
+   ========================================== */
+.hero {
+    background: radial-gradient(circle at 50% 20%, rgba(16, 185, 129, 0.15), transparent 50%),
+                linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.95)),
+                url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: var(--text-main);
+    padding: 180px 0 140px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, var(--neon-mint), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--text-muted);
+    margin-bottom: 44px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+    opacity: 0;
+}
+
+.hero .btn {
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards, pulseGlow 3s infinite ease-in-out;
+    opacity: 0;
+}
+
+/* ==========================================
+   7. SERVICES CARDS
+   ========================================== */
+.services {
+    padding: 140px 0;
+    background-color: var(--bg-deep);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 70px;
+    letter-spacing: -1px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    padding: 48px 36px;
+    border-radius: var(--radius-box);
+    border: 1px solid var(--border-glass);
+    transition: var(--transition);
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+.service-card:nth-child(2) { animation-delay: 2s; }
+.service-card:nth-child(3) { animation-delay: 4s; }
+
+.service-card:hover {
+    transform: translateY(-14px) scale(1.02);
+    background-color: var(--bg-card-hover);
+    box-shadow: 0 0 35px rgba(0, 245, 160, 0.2), var(--shadow-card);
+    animation-play-state: paused;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/* ==========================================
+   8. CONTACT FORM
+   ========================================== */
+.contact-section {
+    padding: 140px 0;
+    background: radial-gradient(circle at 50% 80%, rgba(0, 217, 245, 0.05), transparent 60%), var(--bg-deep);
+}
+
+#contactForm {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--bg-card);
+    padding: 64px;
+    border-radius: 28px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-glass);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contactForm h2 {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--text-main);
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 18px 22px;
+    border: 1px solid var(--border-glass);
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--text-main);
+    background-color: rgba(11, 15, 25, 0.6);
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--neon-mint);
+    box-shadow: 0 0 25px rgba(0, 245, 160, 0.25);
+    background-color: var(--bg-deep);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contactForm .btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 18px;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 40px; }
+    .nav-links { display: none; }
+    #contactForm { padding: 36px 24px; }
+}
