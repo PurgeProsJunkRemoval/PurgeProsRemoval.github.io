@@ -28,6 +28,7 @@ const EMAILJS_PUBLIC_KEY = 'LBcv2jeA1Lyl1YqkL';
 const EMAILJS_SERVICE_ID = 'service_6glbmn8';
 const EMAILJS_TEMPLATE_ID = 'template_pfr96oe';
 
+
 if (window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 }
