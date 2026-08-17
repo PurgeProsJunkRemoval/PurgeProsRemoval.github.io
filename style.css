@@ -317,3 +317,363 @@ textarea {
     .nav-links { display: none; }
     #contactForm { padding: 36px 24px; }
 }
+/* ==========================================
+   9. HERO EXTRAS
+   ========================================== */
+.hero-eyebrow {
+    color: var(--neon-mint);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+    opacity: 0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-glass);
+    box-shadow: none;
+    animation: none;
+}
+
+.btn-ghost:hover {
+    border-color: var(--neon-mint);
+    box-shadow: 0 0 20px rgba(0, 245, 160, 0.15);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.hero-trust {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--text-muted);
+    font-size: 14px;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+    opacity: 0;
+}
+
+/* ==========================================
+   10. NAV TOGGLE (mobile)
+   ========================================== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-main);
+    transition: var(--transition);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-links-mobile-cta { display: none; }
+
+/* ==========================================
+   11. EYEBROW / SECTION TITLE VARIANTS
+   ========================================== */
+.eyebrow {
+    text-align: center;
+    color: var(--neon-mint);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title-left { text-align: left; margin-bottom: 24px; }
+
+/* ==========================================
+   12. ABOUT SECTION
+   ========================================== */
+.about {
+    padding: 140px 0;
+    background: radial-gradient(circle at 0% 50%, rgba(0, 245, 160, 0.06), transparent 55%), var(--bg-deep);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.about-text {
+    color: var(--text-muted);
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.about-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-list li {
+    color: var(--text-muted);
+    padding-left: 28px;
+    position: relative;
+}
+
+.about-list li::before {
+    content: "✔";
+    color: var(--neon-mint);
+    position: absolute;
+    left: 0;
+}
+
+.about-list strong { color: var(--text-main); }
+
+.about-stats {
+    display: grid;
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-box);
+    padding: 28px 32px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--neon-mint), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ==========================================
+   13. REVIEWS
+   ========================================== */
+.reviews {
+    padding: 140px 0;
+    background-color: var(--bg-deep);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.review-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-box);
+    padding: 36px 32px;
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    background-color: var(--bg-card-hover);
+}
+
+.stars {
+    color: var(--neon-mint);
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.review-card p {
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
+
+.review-author {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* ==========================================
+   14. FORM FIELDS & STATUS
+   ========================================== */
+.form-subtext {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.form-subtext a {
+    color: var(--neon-mint);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.field input.invalid, .field textarea.invalid {
+    border-color: #F87171;
+    box-shadow: 0 0 20px rgba(248, 113, 113, 0.2);
+}
+
+.field-error {
+    color: #F87171;
+    font-size: 13px;
+    min-height: 16px;
+    display: block;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.form-status {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    min-height: 22px;
+}
+
+.form-status.success { color: var(--neon-mint); }
+.form-status.error { color: #F87171; }
+
+/* ==========================================
+   15. FOOTER
+   ========================================== */
+footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-glass);
+    padding: 72px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+}
+
+.footer-tagline {
+    color: var(--text-muted);
+    margin-top: 14px;
+    max-width: 280px;
+}
+
+.footer-col h4 {
+    font-size: 15px;
+    margin-bottom: 14px;
+    color: var(--text-main);
+}
+
+.footer-col p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-col a:hover { color: var(--neon-mint); }
+
+.footer-bottom {
+    border-top: 1px solid var(--border-glass);
+    text-align: center;
+    padding: 24px 0;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ==========================================
+   16. ACCESSIBILITY
+   ========================================== */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--neon-mint);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================
+   17. RESPONSIVE (mobile nav + new sections)
+   ========================================== */
+@media (max-width: 768px) {
+    .nav-toggle { display: flex; }
+    .nav-cta-desktop { display: none; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background: rgba(11, 15, 25, 0.97);
+        backdrop-filter: blur(16px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 32px 32px;
+        gap: 22px;
+        border-bottom: 1px solid var(--border-glass);
+    }
+
+    .nav-links.open { display: flex; }
+    .nav-links-mobile-cta { display: block; width: 100%; }
+    .nav-links-mobile-cta .btn { width: 100%; }
+
+    .about-grid { grid-template-columns: 1fr; }
+    .section-title-left { text-align: center; }
+    .about-copy { text-align: center; }
+    .about-list li { text-align: left; }
+
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .footer-tagline { margin-left: auto; margin-right: auto; }
+}

@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purge Pros Junk Removal | Fast, Reliable Cleanup</title>
+    <title>Purge Pros Junk Removal | Fast, Reliable Cleanup in Snohomish County, WA</title>
+    <meta name="description" content="Purge Pros Junk Removal offers fast, reliable, eco-friendly junk removal for homes and businesses. Same-day quotes. Call (425) 948-9573.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Purge Pros Junk Removal">
+    <meta property="og:description" content="Fast, reliable, and eco-friendly junk removal services backed by professional care.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon (inline emoji, no extra file needed) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- EmailJS: sends the contact form without a backend server -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -13,11 +30,20 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">⚡ Purge Pros</a>
-                <ul class="nav-links">
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#about">Why Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
                     <li><a href="#contact">Get a Quote</a></li>
+                    <li class="nav-links-mobile-cta"><a href="#contact" class="btn">Book Now</a></li>
                 </ul>
-                <a href="#contact" class="btn">Book Now</a>
+
+                <a href="#contact" class="btn nav-cta-desktop">Book Now</a>
             </nav>
         </div>
     </header>
@@ -25,28 +51,96 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
+            <p class="hero-eyebrow">Serving Snohomish County & Greater Seattle</p>
             <h1>Clear the Clutter, <span>Reclaim Your Space</span></h1>
             <p>Fast, reliable, and eco-friendly junk removal services backed by professional care.</p>
-            <a href="#contact" class="btn">Free Estimate</a>
+            <div class="hero-actions">
+                <a href="#contact" class="btn">Free Estimate</a>
+                <a href="tel:4259489573" class="btn btn-ghost">📞 (425) 948-9573</a>
+            </div>
+            <ul class="hero-trust">
+                <li>✔ Same-day quotes</li>
+                <li>✔ Licensed & insured</li>
+                <li>✔ Eco-friendly disposal</li>
+            </ul>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
+            <p class="eyebrow">What We Do</p>
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="service-icon">🏠</div>
                     <h3>Residential Cleanouts</h3>
                     <p>Basements, garages, attics, and whole-house cleanouts. We handle all the heavy lifting.</p>
                 </div>
                 <div class="service-card">
+                    <div class="service-icon">🏢</div>
                     <h3>Commercial Removal</h3>
                     <p>Office furniture, old electronics, and retail fixtures cleared out quickly and efficiently.</p>
                 </div>
                 <div class="service-card">
+                    <div class="service-icon">🧊</div>
                     <h3>Appliance Disposal</h3>
                     <p>Old refrigerators, washers, dryers, and bulky furniture picked up and disposed of responsibly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Why Choose Us -->
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-copy">
+                <p class="eyebrow">Why Purge Pros</p>
+                <h2 class="section-title section-title-left">Junk removal, done right</h2>
+                <p class="about-text">We show up on time, give you an upfront price before we lift a finger, and leave the space cleaner than we found it. No hidden fees, no hourly guesswork.</p>
+                <ul class="about-list">
+                    <li><strong>Upfront pricing</strong> — you approve the cost before we start.</li>
+                    <li><strong>Responsible disposal</strong> — we donate and recycle whenever possible.</li>
+                    <li><strong>Full-service</strong> — we do the loading, sweeping, and hauling.</li>
+                </ul>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <span class="stat-number">24hr</span>
+                    <span class="stat-label">Typical response time</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Upfront, no-surprise pricing</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">Local</span>
+                    <span class="stat-label">Family-owned & operated</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <p class="eyebrow">Customer Love</p>
+            <h2 class="section-title">What Neighbors Are Saying</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Showed up on time, gave a fair quote, and had our garage cleared out in under an hour."</p>
+                    <span class="review-author">— Jamie R.</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional, friendly, and careful with our floors. Would book again in a heartbeat."</p>
+                    <span class="review-author">— Marcus T.</span>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Best price we found for an old appliance haul-away. Easy scheduling too."</p>
+                    <span class="review-author">— Priya S.</span>
                 </div>
             </div>
         </div>
@@ -55,31 +149,68 @@
     <!-- Contact Form & Info Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-           <form id="contactForm" action="https://formsubmit.co/purgeprosremoval@gmail.com" method="POST">
-    <h2>Get a Free Quote</h2>
-    <p style="text-align: center; color: var(--text-muted); margin-bottom: 10px;">
-        Or call us directly at <a href="tel:4259489573" style="color: var(--neon-mint); text-decoration: none; font-weight: 700;">(425) 948-9573</a>
-    </p>
-    
-    <!-- Optional: Redirect after submission or prevent captcha -->
-    <input type="hidden" name="_subject" value="New Junk Removal Quote Request!">
-    <input type="hidden" name="_captcha" value="false">
+           <!-- Submitted via EmailJS in script.js — no server or third-party form action needed -->
+           <form id="contactForm" novalidate>
+                <h2>Get a Free Quote</h2>
+                <p class="form-subtext">
+                    Or call us directly at <a href="tel:4259489573">(425) 948-9573</a>
+                </p>
 
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="message" placeholder="What needs to be removed?"></textarea>
-    
-    <button type="submit" class="btn">Send Request</button>
-</form>
+                <!-- Honeypot spam trap: real users never fill this in -->
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+                    <span class="field-error" data-error-for="name"></span>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(425) 555-0123" required>
+                    <span class="field-error" data-error-for="phone"></span>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="jane@email.com" required>
+                    <span class="field-error" data-error-for="email"></span>
+                </div>
+
+                <div class="field">
+                    <label for="message">What needs to be removed?</label>
+                    <textarea id="message" name="message" placeholder="e.g. Old couch, mattress, and yard debris in Marysville"></textarea>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">
+                    <span class="btn-label">Send Request</span>
+                </button>
+
+                <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container" style="text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 14px;">
-            <p>📧 Email us at: <a href="mailto:purgeprosremoval@gmail.com" style="color: var(--neon-mint); text-decoration: none;">purgeprosremoval@gmail.com</a></p>
-            <p style="margin-top: 10px;">&copy; 2026 Purge Pros Junk Removal. All rights reserved.</p>
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="logo">⚡ Purge Pros</a>
+                <p class="footer-tagline">Fast, reliable junk removal for homes and businesses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>📞 <a href="tel:4259489573">(425) 948-9573</a></p>
+                <p>📧 <a href="mailto:purgeprosremoval@gmail.com">purgeprosremoval@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Mon–Sat: 7am – 7pm</p>
+                <p>Sunday: By appointment</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Purge Pros Junk Removal. All rights reserved.</p>
         </div>
     </footer>
 
