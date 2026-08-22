@@ -98,11 +98,18 @@ if (form) {
         formStatus.className = 'form-status';
 
         try {
+            const service = form.elements['service'] ? form.elements['service'].value : '';
+            const details = form.elements['message'].value.trim();
+            const combinedMessage = [
+                service ? `Service requested: ${service}` : '',
+                details
+            ].filter(Boolean).join('\n') || '(none provided)';
+
             await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
                 name: form.elements['name'].value.trim(),
                 phone: form.elements['phone'].value.trim(),
                 email: form.elements['email'].value.trim(),
-                message: form.elements['message'].value.trim() || '(none provided)'
+                message: combinedMessage
             });
 
             formStatus.textContent = "Thanks! Your quote request is on its way — we'll be in touch shortly.";

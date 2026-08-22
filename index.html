@@ -3,33 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purge Pros Junk Removal | Fast, Reliable Cleanup in Snohomish County, WA</title>
-    <meta name="description" content="Purge Pros Junk Removal offers fast, reliable, eco-friendly junk removal for homes and businesses. Same-day quotes. Call (425) 948-9573.">
+    <title>Purge Pros Junk Removal | Same-Day Cleanouts in Snohomish County, WA</title>
+    <meta name="description" content="Purge Pros Junk Removal offers fast, upfront-priced junk removal and estate cleanouts for homes and businesses across Snohomish County. Same-day quotes. Call (425) 948-9573.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Purge Pros Junk Removal">
-    <meta property="og:description" content="Fast, reliable, and eco-friendly junk removal services backed by professional care.">
+    <meta property="og:description" content="Same-day junk removal and estate cleanouts across Snohomish County — upfront pricing, licensed & insured crew.">
     <meta property="og:type" content="website">
 
-    <!-- Favicon (inline emoji, no extra file needed) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link rel="icon" href="logo.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Local business structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Purge Pros Junk Removal",
+      "image": "PurgePros_Logo.png",
+      "telephone": "+1-425-948-9573",
+      "email": "purgeprosremoval@gmail.com",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Snohomish County, WA"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:00",
+          "closes": "19:00"
+        }
+      ]
+    }
+    </script>
 
     <!-- EmailJS: sends the contact form without a backend server -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">Purge Pros</a>
+                <a href="#" class="logo"><img src="PurgePros_Logo.png" alt="Purge Pros Junk Removal" height="34"></a>
 
                 <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
                     <span></span><span></span><span></span>
@@ -37,39 +63,88 @@
 
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#about">Why Us</a></li>
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#areas">Service Area</a></li>
                     <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Get a Quote</a></li>
                     <li class="nav-links-mobile-cta"><a href="#contact" class="btn">Book Now</a></li>
                 </ul>
 
-                <a href="#contact" class="btn nav-cta-desktop">Book Now</a>
+                <a href="#contact" class="btn nav-cta-desktop">Get a Quote</a>
             </nav>
         </div>
     </header>
 
+    <main id="main">
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <p class="hero-eyebrow">Serving Snohomish County & Greater Seattle</p>
-            <h1>Clear the Clutter, <span>Reclaim Your Space</span></h1>
-            <p>Fast, reliable, and eco-friendly junk removal services backed by professional care.</p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn">Free Estimate</a>
-                <a href="tel:4259489573" class="btn btn-ghost">📞 (425) 948-9573</a>
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Snohomish County & Greater Seattle</p>
+                <h1>Clear it out.<br><span>Keep it simple.</span></h1>
+                <p>Same-day junk removal and estate cleanouts for homes and businesses. You get an upfront price before we lift a finger — no hourly guesswork, no surprises on the invoice.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn">Get a Free Quote</a>
+                    <a href="tel:4259489573" class="btn btn-ghost">Call (425) 948-9573</a>
+                </div>
+                <ul class="hero-trust">
+                    <li>Same-day quotes</li>
+                    <li>Licensed &amp; insured</li>
+                    <li>Donate &amp; recycle first</li>
+                </ul>
             </div>
-            <ul class="hero-trust">
-                <li>✔ Same-day quotes</li>
-                <li>✔ Licensed & insured</li>
-                <li>✔ Eco-friendly disposal</li>
-            </ul>
+
+            <div class="hero-ticket" aria-hidden="true">
+                <div class="ticket-head">
+                    <span class="ticket-label">Work Order</span>
+                    <span class="ticket-num">No. PP&nbsp;2026</span>
+                </div>
+                <dl class="ticket-body">
+                    <div class="ticket-row"><dt>Service</dt><dd>Full-Service Haul</dd></div>
+                    <div class="ticket-row"><dt>Pricing</dt><dd>Fixed, quoted upfront</dd></div>
+                    <div class="ticket-row"><dt>Crew</dt><dd>Licensed &amp; insured</dd></div>
+                    <div class="ticket-row"><dt>Arrival</dt><dd>Same-day windows</dd></div>
+                    <div class="ticket-row"><dt>Disposal</dt><dd>Donate / recycle first</dd></div>
+                </dl>
+                <div class="ticket-foot">
+                    <span class="ticket-stamp">Approved on-site</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hazard-divider" role="presentation"></div>
+
+    <!-- How It Works -->
+    <section id="how" class="how">
+        <div class="container">
+            <p class="eyebrow">The Process</p>
+            <h2 class="section-title">Three steps. That's it.</h2>
+            <ol class="how-steps">
+                <li class="how-step">
+                    <span class="how-num">01</span>
+                    <h3>Get your price</h3>
+                    <p>Text a photo, call, or fill out the form. We quote it upfront based on volume — no hourly rate to watch tick up.</p>
+                </li>
+                <li class="how-step">
+                    <span class="how-num">02</span>
+                    <h3>We show up &amp; load</h3>
+                    <p>Pick a same-day or next-day window. Our crew handles the lifting, sweeping, and hauling — you don't touch a thing.</p>
+                </li>
+                <li class="how-step">
+                    <span class="how-num">03</span>
+                    <h3>You reclaim the space</h3>
+                    <p>We donate and recycle what we can before anything hits a landfill. You sign off, we roll out.</p>
+                </li>
+            </ol>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <p class="eyebrow">What We Do</p>
+            <p class="eyebrow">What We Haul</p>
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
@@ -78,14 +153,29 @@
                     <p>Basements, garages, attics, and whole-house cleanouts. We handle all the heavy lifting.</p>
                 </div>
                 <div class="service-card">
+                    <div class="service-icon">🗝️</div>
+                    <h3>Estate Cleanouts</h3>
+                    <p>Compassionate, thorough cleanouts for downsizing, moves, or settling an estate — handled with care.</p>
+                </div>
+                <div class="service-card">
                     <div class="service-icon">🏢</div>
                     <h3>Commercial Removal</h3>
-                    <p>Office furniture, old electronics, and retail fixtures cleared out quickly and efficiently.</p>
+                    <p>Office furniture, old electronics, and retail fixtures cleared out quickly with minimal downtime.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🧊</div>
                     <h3>Appliance Disposal</h3>
                     <p>Old refrigerators, washers, dryers, and bulky furniture picked up and disposed of responsibly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧱</div>
+                    <h3>Construction Debris</h3>
+                    <p>Drywall, flooring, fixtures, and renovation leftovers cleared so your job site stays on schedule.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍂</div>
+                    <h3>Yard &amp; Storm Debris</h3>
+                    <p>Branches, brush, old fencing, and storm cleanup — cleared out before it becomes a bigger job.</p>
                 </div>
             </div>
         </div>
@@ -115,9 +205,31 @@
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">Local</span>
-                    <span class="stat-label">Family-owned & operated</span>
+                    <span class="stat-label">Family-owned &amp; operated</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section id="areas" class="areas">
+        <div class="container">
+            <p class="eyebrow">Where We Work</p>
+            <h2 class="section-title">Proudly serving Snohomish County</h2>
+            <p class="areas-sub">If you're near one of these cities, we're already close by.</p>
+            <ul class="areas-list">
+                <li>Everett</li>
+                <li>Marysville</li>
+                <li>Lynnwood</li>
+                <li>Mill Creek</li>
+                <li>Edmonds</li>
+                <li>Snohomish</li>
+                <li>Lake Stevens</li>
+                <li>Mukilteo</li>
+                <li>Monroe</li>
+                <li>Arlington</li>
+            </ul>
+            <p class="areas-note">Don't see your city? <a href="#contact">Ask us</a> — chances are we cover it too.</p>
         </div>
     </section>
 
@@ -125,32 +237,75 @@
     <section id="reviews" class="reviews">
         <div class="container">
             <p class="eyebrow">Customer Love</p>
-            <h2 class="section-title">What Neighbors Are Saying</h2>
+            <h2 class="section-title">What neighbors are saying</h2>
             <div class="reviews-grid">
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="review-top">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <span class="ticket-num">Job&nbsp;#4471</span>
+                    </div>
                     <p>"Showed up on time, gave a fair quote, and had our garage cleared out in under an hour."</p>
-                    <span class="review-author">— Jamie R.</span>
+                    <span class="review-author">— Jamie R., Everett</span>
                 </div>
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="review-top">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <span class="ticket-num">Job&nbsp;#4488</span>
+                    </div>
                     <p>"Professional, friendly, and careful with our floors. Would book again in a heartbeat."</p>
-                    <span class="review-author">— Marcus T.</span>
+                    <span class="review-author">— Marcus T., Lynnwood</span>
                 </div>
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
+                    <div class="review-top">
+                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <span class="ticket-num">Job&nbsp;#4502</span>
+                    </div>
                     <p>"Best price we found for an old appliance haul-away. Easy scheduling too."</p>
-                    <span class="review-author">— Priya S.</span>
+                    <span class="review-author">— Priya S., Marysville</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <p class="eyebrow">Good to Know</p>
+            <h2 class="section-title">Frequently asked questions</h2>
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary>How is pricing determined?</summary>
+                    <p>Almost entirely by volume — how much space your items take up in the truck. We look at the job (in person, by phone, or from photos) and give you a fixed price before we start. No hourly rate, no surprise line items.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What can't you take?</summary>
+                    <p>We take almost everything: furniture, appliances, electronics, yard debris, and construction leftovers. We can't legally take hazardous materials like paint, chemicals, or asbestos — ask us and we'll point you to the right disposal option.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need to be there?</summary>
+                    <p>Not for the whole job. Many customers show us what needs to go, then head back to work while we handle the rest. We just need someone available to approve the final price.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What happens to my stuff?</summary>
+                    <p>We sort every load — usable items go to local donation centers, recyclables get recycled, and only what's left goes to the transfer station.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How fast can you come out?</summary>
+                    <p>Most requests get a same-day or next-day appointment. Call before noon and we can often get you on the schedule that afternoon.</p>
+                </details>
             </div>
         </div>
     </section>
 
     <!-- Contact Form & Info Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
+        <div class="container contact-grid">
            <!-- Submitted via EmailJS in script.js — no server or third-party form action needed -->
            <form id="contactForm" novalidate>
+                <div class="ticket-head form-ticket-head">
+                    <span class="ticket-label">Quote Request</span>
+                    <span class="ticket-num">No. PP&nbsp;2026</span>
+                </div>
                 <h2>Get a Free Quote</h2>
                 <p class="form-subtext">
                     Or call us directly at <a href="tel:4259489573">(425) 948-9573</a>
@@ -178,7 +333,21 @@
                 </div>
 
                 <div class="field">
-                    <label for="message">What needs to be removed?</label>
+                    <label for="service">What needs to go?</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service (optional)</option>
+                        <option value="Residential Cleanout">Residential Cleanout</option>
+                        <option value="Estate Cleanout">Estate Cleanout</option>
+                        <option value="Commercial Removal">Commercial Removal</option>
+                        <option value="Appliance Disposal">Appliance Disposal</option>
+                        <option value="Construction Debris">Construction Debris</option>
+                        <option value="Yard / Storm Debris">Yard / Storm Debris</option>
+                        <option value="Not Sure">Not sure yet</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="message">Details</label>
                     <textarea id="message" name="message" placeholder="e.g. Old couch, mattress, and yard debris in Marysville"></textarea>
                 </div>
 
@@ -188,31 +357,74 @@
 
                 <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
             </form>
+
+            <div class="contact-info">
+                <div class="info-block">
+                    <span class="info-label">Call or text</span>
+                    <a class="info-value" href="tel:4259489573">(425) 948-9573</a>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">Email</span>
+                    <a class="info-value info-value-sm" href="mailto:purgeprosremoval@gmail.com">purgeprosremoval@gmail.com</a>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">Hours</span>
+                    <span class="info-value info-value-sm">Mon–Sat: 7am – 7pm<br>Sunday: By appointment</span>
+                </div>
+                <div class="info-block">
+                    <span class="info-label">Service area</span>
+                    <span class="info-value info-value-sm">Snohomish County &amp; Greater Seattle</span>
+                </div>
+            </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="container footer-grid">
             <div>
-                <a href="#" class="logo">Purge Pros</a>
-                <p class="footer-tagline">Fast, reliable junk removal for homes and businesses.</p>
+                <a href="#" class="logo"><img src="PurgePros_Logo.png" alt="Purge Pros Junk Removal" height="30"></a>
+                <p class="footer-tagline">Fast, upfront-priced junk removal for homes and businesses across Snohomish County.</p>
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <p>📞 <a href="tel:4259489573">(425) 948-9573</a></p>
-                <p>📧 <a href="mailto:purgeprosremoval@gmail.com">purgeprosremoval@gmail.com</a></p>
+                <p><a href="tel:4259489573">(425) 948-9573</a></p>
+                <p><a href="mailto:purgeprosremoval@gmail.com">purgeprosremoval@gmail.com</a></p>
             </div>
             <div class="footer-col">
                 <h4>Hours</h4>
                 <p>Mon–Sat: 7am – 7pm</p>
                 <p>Sunday: By appointment</p>
             </div>
+            <div class="footer-col">
+                <h4>Service Area</h4>
+                <p>Everett, Marysville, Lynnwood,<br>and the rest of Snohomish County</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/Purge-Pros-Junk-Removal/61588730646983/" class="social-link" aria-label="Purge Pros on Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94Z"/></svg>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/purgeprosremoval" class="social-link" aria-label="Purge Pros on Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.5.5.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44.54C6.08.29 6.81.12 7.87.07 8.94.02 9.28.01 12 .01Zm0 1.8c-2.67 0-2.99.01-4.04.06-.97.04-1.5.2-1.85.34-.46.18-.79.4-1.14.75-.35.35-.57.68-.75 1.14-.14.35-.3.88-.34 1.85-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.97.2 1.5.34 1.85.18.46.4.79.75 1.14.35.35.68.57 1.14.75.35.14.88.3 1.85.34 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.97-.04 1.5-.2 1.85-.34.46-.18.79-.4 1.14-.75.35-.35.57-.68.75-1.14.14-.35.3-.88.34-1.85.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.97-.2-1.5-.34-1.85a3.1 3.1 0 0 0-.75-1.14 3.1 3.1 0 0 0-1.14-.75c-.35-.14-.88-.3-1.85-.34-1.05-.05-1.37-.06-4.04-.06Zm0 3.06a5.14 5.14 0 1 1 0 10.28 5.14 5.14 0 0 1 0-10.28Zm0 1.8a3.34 3.34 0 1 0 0 6.68 3.34 3.34 0 0 0 0-6.68Zm5.34-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
         </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 Purge Pros Junk Removal. All rights reserved.</p>
+            <p>&copy; 2026 Purge Pros Junk Removal. Licensed &amp; insured. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Mobile sticky CTA -->
+    <div class="sticky-cta" role="region" aria-label="Quick contact">
+        <a href="tel:4259489573" class="sticky-btn sticky-call">Call Now</a>
+        <a href="#contact" class="sticky-btn sticky-quote">Get a Quote</a>
+    </div>
 
     <script src="script.js"></script>
 </body>
